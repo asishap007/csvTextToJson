@@ -1,0 +1,18 @@
+{
+  "name": "csv_text_to_json",
+  "version": "1.0.0",
+  "description": "Convert text csv content to json structure. On csv first line , assume it as a header and rest of them as considerd as rows. This module will convert the headers as keys and rows as values in json structure.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "csv",
+    "text",
+    "json",
+    "textToJson",
+    "CSVTextToJson"
+  ],
+  "author": "Asish AP",
+  "license": "MIT"
+}
