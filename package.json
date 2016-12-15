@@ -14,5 +14,11 @@
     "CSVTextToJson"
   ],
   "author": "Asish AP",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.7.14",
+    "extended": "0.0.6",
+    "is-extended": "0.0.10",
+    "object-extended": "0.0.7"
+  }
 }
