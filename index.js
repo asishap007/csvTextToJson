@@ -125,6 +125,18 @@ _(Parser).extend({
         if (_.isObject(from) && from instanceof Stream) {
             var lines = "", parse = this._parse.bind(this), end = this.emit.bind(this, "end");
             from.on("data", function streamOnData(data) {
+
+                /**
+                 * Fix for node version less than 4.4.
+                 * @type {string}
+                 */
+                var tLine = ""+data;
+                var firstChar = tLine.substring(0,1);
+                if(firstChar === '"' && lines){
+                    data = '\t'+ data;
+                }
+                //---------------------
+
                 var lineData = (lines + data).trim().split(LINE_SPLIT);
                 if (lineData.length > 1) {
                     lines = lineData.pop();
